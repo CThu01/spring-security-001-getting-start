@@ -15,8 +15,8 @@
 	<div class="container mt-4">
 		<h1>Member Home</h1>
 		<div>
-			<a href="/" class="btn btn-primary">Back</a>
-		</div>
+			<a href="/" class="btn btn-primary">Back</a>   
+		</div>  
 	</div>
 	
 </body>
