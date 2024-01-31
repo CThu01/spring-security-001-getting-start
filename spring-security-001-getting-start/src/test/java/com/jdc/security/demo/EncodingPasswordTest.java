@@ -11,7 +11,7 @@ public class EncodingPasswordTest {
 		System.out.println(passwordEncoder.encode("admin"));
 		System.out.println(passwordEncoder.encode("admin"));
 		System.out.println(passwordEncoder.encode("admin"));
-		System.out.println(passwordEncoder.encode("admin"));
+		System.out.println(passwordEncoder.encode("member"));
 		
 		System.out.println(passwordEncoder.matches("admin", "$2a$10$tY5XDXpfmdeUXnwp1hMqoeonz0bXfBh1MX3CLtCVfPrul2j00yTK6"));
 	}
