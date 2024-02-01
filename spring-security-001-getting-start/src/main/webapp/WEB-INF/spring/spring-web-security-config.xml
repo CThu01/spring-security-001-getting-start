@@ -23,14 +23,7 @@
 		<security:form-login/>
 		
 	</security:http>
-	
-	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
-		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
-		<property name="url" value="jdbc:mysql://localhost:3306/security_db"></property>
-		<property name="username" value="root"></property>
-		<property name="password" value="admin"></property>
-	</bean>
-	
+		
 	<bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"></bean>
 	
 	<security:authentication-manager>
