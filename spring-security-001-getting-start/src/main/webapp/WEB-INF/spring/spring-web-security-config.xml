@@ -18,6 +18,7 @@
 				
 		<security:intercept-url pattern="/admin/**" access="hasAuthority('Admin')"/>
 		<security:intercept-url pattern="/member/**" access="hasAnyAuthority('Admin','Member')"/>
+		<security:intercept-url pattern="/customer/**" access="hasAuthority('Customer')"/>
 		
 		<security:logout/>
 		<security:form-login/>
@@ -42,6 +43,11 @@
 				authorities-by-username-query="select email username, role from MEMBERS where email=?"
 			/>
 		</security:authentication-provider>
+		
+		<security:authentication-provider user-service-ref="customerUserDetailService" >
+			<security:password-encoder ref="passwordEncoder"/>
+		</security:authentication-provider>
+		
 	</security:authentication-manager>
 	
 <!-- 	<security:user-service>
@@ -50,3 +56,15 @@
 	</security:user-service>
  -->  
 </beans>
+
+
+
+
+
+
+
+
+
+
+
+

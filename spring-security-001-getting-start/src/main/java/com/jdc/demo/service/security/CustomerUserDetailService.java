@@ -9,10 +9,12 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 
 import com.jdc.demo.service.CustomerService;
 import com.jdc.demo.service.dto.CustomerDto;
 
+@Service
 public class CustomerUserDetailService implements UserDetailsService{
 
 	@Autowired
@@ -27,7 +29,7 @@ public class CustomerUserDetailService implements UserDetailsService{
 				.authorities("Customer")
 				.password(customer.getPassword())
 				.disabled(!customer.isActivated())
-				.accountLocked(!customer.isLocked())
+				.accountLocked(customer.isLocked())
 				.accountExpired(isExpired(customer))
 				.credentialsExpired(isCredential(customer))
 				.build())

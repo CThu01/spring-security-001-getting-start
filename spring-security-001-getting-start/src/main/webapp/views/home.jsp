@@ -17,6 +17,7 @@
 		<div>
 			<a href="/admin" class="btn btn-primary">Admin Home</a>
 			<a href="/member" class="btn btn-primary">Member Home</a>
+			<a href="/customer" class="btn btn-primary">Customer Home</a>
 		</div>
 	</div>
 	
